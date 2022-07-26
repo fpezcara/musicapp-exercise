@@ -6,14 +6,13 @@ const Artist = ({artist}) => {
 
   
   const [isShown, setIsShown ] = useState(false);
+  
 
   const handelAlbums = event =>  {
     event.preventDefault();
-    console.log("button");
     setIsShown(current => !current)
     
   }
-
   
 
   return (
@@ -25,7 +24,7 @@ const Artist = ({artist}) => {
         return <li>- {genre}</li>
        }) }
        <button onClick={handelAlbums}>See albums </button>
-       {isShown && <Albums />}
+       {isShown && <Albums artistName={artist.name}/>}
     </div>
   );
 };
