@@ -18,10 +18,6 @@ const Artists = () => {
   return (
     <div>
       <ul>
-        {/* <li>{artists.name}</li> */}
-        {/* {artists.map((artist) => (
-          <li>{artist.name}</li>
-        ))} */}
         {artists.map((artist) => (
           <Artist artist={artist} />
         ))}
