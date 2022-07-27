@@ -1,6 +1,7 @@
 import React from 'react';
 import {useState, useEffect} from "react";
 import axios from "axios";
+import { useNavigate } from 'react-router-dom';
 
 const Albums = () => {
 
@@ -72,6 +73,15 @@ const Albums = () => {
   }, [isShownLyrics])
  
 
+  
+      let navigate = useNavigate();
+
+      async function goBack(event){
+        event.preventDefault();
+        navigate(-1);
+      }
+  
+
   const handelSongs = event =>  {
     event.preventDefault();
     setIsShownSongs(current => !current)    
@@ -87,6 +97,7 @@ const Albums = () => {
 
   return (
     <div>
+      <button onClick={goBack}>Back</button>
       <ul>
       {pinkAlbums.map ( (album) => { 
        return(
