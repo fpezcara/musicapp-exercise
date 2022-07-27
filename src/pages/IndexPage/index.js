@@ -1,6 +1,6 @@
 import React from 'react';
-import "./App.css";
-import { Artists } from "./components";
+import "../../App.css";
+import  Artists  from "../ArtistsPage";
 
 const IndexPage = () => {
     

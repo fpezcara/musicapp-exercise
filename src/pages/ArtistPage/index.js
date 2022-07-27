@@ -1,6 +1,6 @@
 import React from "react";
 import {useState} from "react";
-import Albums from "../Albums";
+import Albums from "../AlbumsPage";
 
 const Artist = ({artist}) => {
 
