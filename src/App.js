@@ -12,7 +12,7 @@ const App = () => {
               <Route path="/" element={<IndexPage />}> </Route> 
               <Route path="/artists">
                  <Route path="/artists" element={<ArtistsPage />}> </Route>
-                 <Route path=":artistName" element={<ArtistPage />}> </Route>
+                 <Route path=":artistName" element={<AlbumsPage />}> </Route>
                  {/* <Route path=":artistAlbums" element={<AlbumsPage />}> </Route> */}
               </Route> 
            </Route> 
