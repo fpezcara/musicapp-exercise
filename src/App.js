@@ -1,13 +1,23 @@
-import "./App.css";
-import { Artists } from "./components";
+import React from "react";
+import Layout from ".components/layouts";
+import { IndexPage, AboutPage, UsersPage, UserPage} from './pages'
 
-const App = () => {
-  return (
-    <div className="App">
-      <h1>Music App</h1>
-      <Artists />
-    </div>
-  );
+import { Routes, Route } from "react-router-dom";const App = () => {
+    
+    return (
+        <Routes>
+            <Route path="/" element={<Layout />}>             
+              <Route path="/" element={<IndexPage />}> </Route>
+              <Route path="/about" element={<AboutPage />}> </Route> 
+              <Route path="/users">
+                 <Route path="/users" element={<UsersPage />}> </Route>
+                 <Route path=":userName" element={<UserPage />}> </Route>
+              </Route> 
+           </Route> 
+         </Routes>
+         
+    )
+    
 }
 
 export default App;

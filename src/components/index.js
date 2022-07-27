@@ -1,2 +1,2 @@
-export { default as Albums } from "./Albums";
+export { default as Albums } from "./pages/Albums";
 export { default as Artists } from "./Artists";
